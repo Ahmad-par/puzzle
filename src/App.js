@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Video from './components/Video'
 import Container from './components/Container'
