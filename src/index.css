@@ -11,3 +11,245 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+@font-face {
+  font-family: "underline";
+  src: url(assets/SnackFont.otf);
+}
+
+*{
+  box-sizing: border-box;
+  font-family: "underline";
+}
+#container{
+  text-align: center;
+  width: 100%;
+  margin: 1rem auto;
+  /* padding: 1rem; */
+  /* border: 1px black solid; */
+}
+.row{
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0;
+  justify-content: center;
+}
+.canv{
+  width: 10vw;
+  aspect-ratio: 1.3;
+  margin: 1px;
+  /* border: 1px black solid; */
+  /* border-radius: 5px; */
+}
+.canv-clicked{
+  border: 3px solid black;
+}
+.canv-correct{
+  border: 3px solid green;
+}
+@media screen and (max-width: 400px) {
+  .canv{
+    width: 15vw;
+  }
+  .canv-clicked{
+    border: 2px solid black;
+  }
+  .canv-correct{
+    border: 2px solid green;
+  }
+}
+video{
+  display: none;
+}
+.head{
+  min-height: 7vh;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom: 1px solid black; */
+  background-color: rgba(211, 211, 211, .2)
+}
+.left-buts{
+  width: 40%;
+  min-width: 20%;
+  /* display: flex;
+  justify-content: space-around; */
+  /* border-right: 1px solid black; */
+}
+.right-buts{
+  width: 40%;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: end; */
+  text-align: center;
+  /* border-left: 1px solid black; */
+}
+@media screen and (max-width: 400px) {
+  .right-buts{
+    text-align: right;
+  }
+  .switch-icon{
+    text-align: left;
+  }
+  .switch-icon img{
+    left: -10px;
+    max-width: 90%;
+  }
+}
+.switch-icon{
+  padding: 0;
+  min-width: 20%;
+  text-align: center;
+}
+.switch-icon button{
+  width: 100%;
+  opacity: 1;
+  border: none;
+  background-color: inherit;
+}
+.switch-icon img{
+  position: relative;
+  top: -10px;
+  max-width: 80%;
+}
+.dim-set{
+  margin-right: 10px;
+  margin-bottom: 5px;
+  width: 15%;
+  min-width: 50px;
+  background-color: white;
+  font-size: medium;
+  padding: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.dim-set:hover{
+  border-color: orange;
+}
+.active{
+  background-color: orange;
+  border-color: orange;
+}
+.home-but{
+  width: 20%;
+  min-width: 50px;
+  padding: 5px;
+  background-color: orange;
+  border-color: orange;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 1rem;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.error-dialog{
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, .9);
+}
+.error-desc{
+  position: relative;
+  max-width: 80%;
+  min-height: 20%;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  font-size: 15pt;
+  padding: 1rem 2rem ;
+  text-align: center;
+}
+.error-dialog img{
+  position: absolute;
+  top: 20px;
+  left: 90%;
+  width: 30px;
+  aspect-ratio: 1;
+  cursor: pointer;
+  
+}
+@media screen and (max-width: 400px) {
+  .error-desc{
+    font-size: 10pt;
+    padding: .5rem;
+  }
+  .error-dialog img{
+    left: 85%;
+  }
+}
+.foot{
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.foot button{
+  width: 20%;
+  border-radius: 10px;
+  background-color: rgb(6, 230, 136);
+  border-color: rgb(6, 230, 136);
+  padding: 10px;
+  font-size: 10pt;
+  cursor: pointer;
+}
+.foot > span{
+  width: 80px;
+  /* border-radius: 5px;
+  background-color: red;
+  border-color: red; */
+  color:red;
+  padding: 5px;
+  font-size: 10pt;
+  text-align: center;
+  user-select: none;
+}
+.foot p{
+  user-select: none;
+}
+@media screen and (max-width: 400px) {
+  .foot{
+    margin-top: 1rem;
+  }
+  .foot button{
+    min-width: 40%;
+    padding: 5px;
+  }
+  .foot span{
+    min-width: 30%;
+  }
+  .foot p{
+    font-size: 8pt;
+  }
+}
+.success{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#success-ban{
+  color:rgb(6, 230, 136);
+  font-size: 30pt;
+  text-align: center;
+  user-select: none;
+  margin-bottom: 1rem;
+}
+#success-butt{
+  border-color: black;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+  width: 80px;
+}
+@media screen and (max-width: 400px){
+  #success-ban{
+    font-size: 20pt;
+  }
+}
