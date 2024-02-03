@@ -46,7 +46,10 @@ code {
 .canv-correct{
   border: 3px solid green;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
+  #container{
+    margin: 2rem auto;
+  }
   .canv{
     width: 15vw;
   }
@@ -83,7 +86,7 @@ video{
   text-align: center;
   /* border-left: 1px solid black; */
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
   .right-buts{
     text-align: right;
   }
@@ -171,7 +174,7 @@ video{
   cursor: pointer;
   
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
   .error-desc{
     font-size: 10pt;
     padding: .5rem;
@@ -212,7 +215,7 @@ video{
 .foot p{
   user-select: none;
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 650px) {
   .foot{
     margin-top: 1rem;
   }
@@ -224,7 +227,7 @@ video{
     min-width: 30%;
   }
   .foot p{
-    font-size: 8pt;
+    font-size: 9pt;
   }
 }
 .success{
@@ -248,8 +251,11 @@ video{
   padding: 5px;
   width: 80px;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 650px){
   #success-ban{
     font-size: 20pt;
+  }
+  #success-butt{
+    min-width: 20%;
   }
 }

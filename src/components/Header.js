@@ -19,7 +19,7 @@ function Header({dim, setDim, setPlaying, setCamera, streamObj, messy}){
   return (
     <div className="head">
       <div className="left-buts">
-        <button className="home-but">Home</button>
+        <button className="home-but" onClick={()=> window.location.reload()}>Home</button>
       </div>
       <div className='switch-icon'>
         <button title='switch camera' disabled={messy? true: false}><img src={cameraIcon} alt='switch camera' onClick={cameraIconHandler}/></button>
