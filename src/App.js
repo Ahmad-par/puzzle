@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       {isError? <NotWork setIsError={setIsError}/>: undefined}
-      <Header dim={dimension} setDim={setDimension} setPlaying={setIsVideoPlaying} setCamera={setIsFront} streamObj={stream} messy={messy}/>
+      <Header dim={dimension} setDim={setDimension} setPlaying={setIsVideoPlaying} setCamera={setIsFront} streamObj={stream} messy={messy} showFooter={showFooter}/>
       <Video streamObj={stream} setPlaying={setIsVideoPlaying} setVideo={setVideoObj}/>
       <Container streamObj={stream} isPlaying={isVideoPlaying} videoObj={videoObj} dim={dimension} messy={messy} setMessy={setMessy} setSuccess={setSuccess}/>
       {showFooter && <Footer messy={messy} setMessy={setMessy} success={success} setSuccess={setSuccess}/>}

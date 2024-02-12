@@ -1,6 +1,6 @@
 import cameraIcon from '../assets/icons8-switch-camera-48.png'
 
-function Header({dim, setDim, setPlaying, setCamera, streamObj, messy}){
+function Header({dim, setDim, setPlaying, setCamera, streamObj, messy, showFooter}){
 
   function buttonHandler(event){
     if (event.target.nodeName.toLowerCase() === 'button'){
@@ -22,12 +22,12 @@ function Header({dim, setDim, setPlaying, setCamera, streamObj, messy}){
         <button className="home-but" onClick={()=> window.location.reload()}>Home</button>
       </div>
       <div className='switch-icon'>
-        <button title='switch camera' disabled={messy? true: false}><img src={cameraIcon} alt='switch camera' onClick={cameraIconHandler}/></button>
+        <button title='switch camera' disabled={messy? true: showFooter? false: true}><img src={cameraIcon} alt='switch camera' onClick={cameraIconHandler}/></button>
       </div>
       <div onClick={buttonHandler} className="right-buts">
-        <button className={dim === 4? 'active dim-set': 'dim-set'} disabled={messy? true: false}>4x4</button>
-        <button className={dim === 5? 'active dim-set': 'dim-set'} disabled={messy? true: false}>5x5</button>
-        <button className={dim === 6? 'active dim-set': 'dim-set'} disabled={messy? true: false}>6x6</button>
+        <button className={dim === 4? 'active dim-set': 'dim-set'} disabled={messy? true: showFooter? false: true}>4x4</button>
+        <button className={dim === 5? 'active dim-set': 'dim-set'} disabled={messy? true: showFooter? false: true}>5x5</button>
+        <button className={dim === 6? 'active dim-set': 'dim-set'} disabled={messy? true: showFooter? false: true}>6x6</button>
       </div>
     </div>
   )
