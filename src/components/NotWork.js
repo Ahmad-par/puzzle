@@ -14,7 +14,7 @@ function NotWork({setIsError}){
         <p>Sorry, an <span style={{color: 'red'}}>error</span> occured! To use this app please make sure:</p>
         <p>1- Your device has a camera.</p>
         <p>2- You allow this page to access your camera.</p>
-        <p>If both conditions are met, press <i style={{color: 'orange'}}>Home</i> button to refresh the page</p>
+        <p>If both are met, press <i style={{color: 'orange'}}>Home</i> button to refresh the page</p>
       </div>
       
     </div>

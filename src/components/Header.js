@@ -22,7 +22,7 @@ function Header({dim, setDim, setPlaying, setCamera, streamObj, messy, showFoote
         <button className="home-but" onClick={()=> window.location.reload()}>Home</button>
       </div>
       <div className='switch-icon'>
-        <button title='switch camera' disabled={messy? true: showFooter? false: true}><img src={cameraIcon} alt='switch camera' onClick={cameraIconHandler}/></button>
+        <button title='switch camera' disabled={messy? true: showFooter? false: true}  onClick={cameraIconHandler}><img src={cameraIcon} alt='switch camera'/></button>
       </div>
       <div onClick={buttonHandler} className="right-buts">
         <button className={dim === 4? 'active dim-set': 'dim-set'} disabled={messy? true: showFooter? false: true}>4x4</button>
