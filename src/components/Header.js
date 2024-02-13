@@ -9,7 +9,10 @@ function Header({dim, setDim, setPlaying, setCamera, streamObj, messy, showFoote
     }
     
   }
-  function cameraIconHandler(){
+  function cameraIconHandler(event){
+    if (event.target.tagName.toLowerCase() !== 'img'){
+      return
+    }
     setPlaying(false)
     if (streamObj){
       streamObj.getVideoTracks()[0].stop()
